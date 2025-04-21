@@ -1,0 +1,15 @@
+name: "BookVerse Theme"
+type: theme
+core_version_requirement: ^10 || ^11
+description: "Custom Bootstrap-based theme for BookVerse"
+package: custom
+
+libraries:
+  - bookverse-theme/global-styling
+
+regions:
+  - header: Header
+  - primary_menu: "Primary Menu"
+  - content: Content
+  - sidebar: Sidebar
+  - footer: Footer
