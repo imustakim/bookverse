@@ -1,0 +1,17 @@
+uuid: 9e844d19-6d9b-4f87-95c0-110af1bdb9da
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Team Member'
+type: team_member
+description: 'Content type to manage team members'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

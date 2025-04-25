@@ -1,0 +1,19 @@
+uuid: d6404ea2-ebda-4adf-9aed-f8d231162afe
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_associated_books
+field_name: field_associated_books
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
