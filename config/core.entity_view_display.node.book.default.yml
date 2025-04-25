@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.book.field_description
     - field.field.node.book.field_genre
     - field.field.node.book.field_publication_date
+    - image.style.large
     - node.type.book
   module:
     - datetime
@@ -29,10 +30,10 @@ content:
     region: content
   field_cover_image:
     type: image
-    label: above
+    label: hidden
     settings:
       image_link: ''
-      image_style: ''
+      image_style: large
       image_loading:
         attribute: lazy
     third_party_settings: {  }

@@ -3,8 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.author.field_associated_books
     - field.field.node.author.field_bio
     - field.field.node.author.field_photo
+    - image.style.large
     - node.type.author
   module:
     - image
@@ -15,6 +17,14 @@ targetEntityType: node
 bundle: author
 mode: default
 content:
+  field_associated_books:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
   field_bio:
     type: text_default
     label: above
@@ -24,10 +34,10 @@ content:
     region: content
   field_photo:
     type: image
-    label: above
+    label: hidden
     settings:
       image_link: ''
-      image_style: ''
+      image_style: large
       image_loading:
         attribute: lazy
     third_party_settings: {  }
