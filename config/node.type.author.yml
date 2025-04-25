@@ -1,0 +1,17 @@
+uuid: 93c2cbd2-d77d-4ff7-b802-942b50657d1e
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Author
+type: author
+description: 'Content type to add author'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

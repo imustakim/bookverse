@@ -1,29 +1,52 @@
-uuid: 78219911-92f6-40c5-8510-da0899f1cb83
+uuid: ad152a16-bda0-4bd9-8684-d0c90e55e5ac
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.article.body
-    - field.field.node.article.comment
-    - field.field.node.article.field_image
-    - field.field.node.article.field_tags
+    - field.field.node.book.field_author
+    - field.field.node.book.field_cover_image
+    - field.field.node.book.field_description
+    - field.field.node.book.field_genre
+    - field.field.node.book.field_publication_date
     - image.style.thumbnail
-    - node.type.article
+    - node.type.book
   module:
-    - comment
+    - datetime
     - image
     - path
     - text
-_core:
-  default_config_hash: ewbd6G2uX456-bgwseM2Q-KQG3RkASoyHmTh-XR3oLU
-id: node.article.default
+id: node.book.default
 targetEntityType: node
-bundle: article
+bundle: book
 mode: default
 content:
-  body:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_author:
+    type: entity_reference_autocomplete
+    weight: 125
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_cover_image:
+    type: image_image
+    weight: 121
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_description:
     type: text_textarea_with_summary
-    weight: 2
+    weight: 122
     region: content
     settings:
       rows: 9
@@ -31,35 +54,21 @@ content:
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
-  comment:
-    type: comment_default
-    weight: 20
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  created:
-    type: datetime_timestamp
-    weight: 10
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_image:
-    type: image_image
-    weight: 1
-    region: content
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-  field_tags:
-    type: entity_reference_autocomplete_tags
-    weight: 3
+  field_genre:
+    type: entity_reference_autocomplete
+    weight: 126
     region: content
     settings:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_publication_date:
+    type: datetime_default
+    weight: 124
+    region: content
+    settings: {  }
     third_party_settings: {  }
   path:
     type: path
@@ -90,7 +99,7 @@ content:
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: -5
     region: content
     settings:
       size: 60

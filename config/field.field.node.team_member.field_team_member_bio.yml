@@ -1,0 +1,30 @@
+uuid: 76f66087-344d-422f-b980-387cafcf1b6d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_team_member_bio
+    - filter.format.basic_html
+    - filter.format.full_html
+    - filter.format.plain_text
+    - filter.format.restricted_html
+    - node.type.team_member
+  module:
+    - text
+id: node.team_member.field_team_member_bio
+field_name: field_team_member_bio
+entity_type: node
+bundle: team_member
+label: 'Team member bio'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+    - restricted_html
+    - full_html
+    - plain_text
+field_type: text_long

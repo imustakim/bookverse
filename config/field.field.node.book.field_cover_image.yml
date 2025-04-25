@@ -1,22 +1,20 @@
-uuid: 2a4751c8-c305-4749-8ca3-647ffbef9083
+uuid: 8351df98-58f0-4328-bd5f-65854ce345a2
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_image
-    - node.type.article
+    - field.storage.node.field_cover_image
+    - node.type.book
   module:
     - image
-_core:
-  default_config_hash: j0riO_-77ZFWNLtj0iJ31HnohiNjdn8HUL86RueCF-M
-id: node.article.field_image
-field_name: field_image
+id: node.book.field_cover_image
+field_name: field_cover_image
 entity_type: node
-bundle: article
-label: Image
+bundle: book
+label: 'Cover Image'
 description: ''
-required: false
-translatable: true
+required: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
@@ -32,7 +30,7 @@ settings:
   title_field: false
   title_field_required: false
   default_image:
-    uuid: null
+    uuid: ''
     alt: ''
     title: ''
     width: null
